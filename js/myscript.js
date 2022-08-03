@@ -34,6 +34,7 @@ function generateTeam(nome, ruolo, image) {
 }
 
 
+
 const theTeam = [
     generateTeam('Wayne Barnett', 'Founder & CEO', 'wayne-barnett-founder-ceo.jpg'),
     generateTeam('Angela Caroll', 'Chief Editor', 'angela - caroll - chief - editor.jpg'),
@@ -42,10 +43,11 @@ const theTeam = [
     generateTeam('Scott Estrada', 'Developer', 'scott - estrada - developer.jpg'),
     generateTeam('Barbara Ramos', 'Graphic Designer', 'barbara - ramos - graphic - designer.jpg'),
 
-    
+
 ]
 
 console.log(theTeam)
+
 
 for (const key in theTeam) {
 
@@ -54,3 +56,33 @@ for (const key in theTeam) {
     console.log(element)
 }
 
+const ulListEl = document.querySelector('.ul__list')
+
+// console.log(ulListEl)
+
+
+//  ciclo per stampare i dati 
+theTeam.forEach(onLoop)
+
+// funzione per  stampare i dati 
+function onLoop(ourTeam) {
+    ulListEl.innerHTML += `<li>${ourTeam.nome} ${ourTeam.ruolo}, ${ourTeam.image} .</li>`
+}
+
+
+// stampa su console migliore 
+for(let i=0; i<theTeam.length; i++){
+    const pesonaCorrente= theTeam[i]
+  
+   
+    for (const key in pesonaCorrente) {
+
+        const element = pesonaCorrente[key];
+    
+        console.log(element)
+    }
+    
+
+
+
+}
