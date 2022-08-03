@@ -44,7 +44,7 @@ function generateTeam(nome, ruolo, image) {
 
 const theTeam = [
     generateTeam('Wayne Barnett', 'Founder & CEO', 'wayne-barnett-founder-ceo.jpg'),
-    generateTeam('Angela Caroll', 'Chief Editor', 'angela-lopez-social-media-manager.jpg'),
+    generateTeam('Angela Caroll', 'Chief Editor', 'angela-caroll-chief-editor.jpg'),
     generateTeam('Walter Gordon', 'Office Manager', 'walter-gordon-office-manager.jpg'),
     generateTeam('Angela Lopez', 'Social Media Manager', 'angela-lopez-social-media-manager.jpg'),
     generateTeam('Scott Estrada', 'Developer', 'scott-estrada-developer.jpg'),
@@ -73,7 +73,7 @@ theTeam.forEach(onLoop)
 
 // funzione per  stampare i dati 
 function onLoop(ourTeam) {
-    ulListEl.innerHTML += `<li class="li__list"> <p>${ourTeam.nome} ${ourTeam.ruolo}.</p><img src="./img/${ourTeam.image}" alt=""</li>` 
+    ulListEl.innerHTML += `<li class="li__list"> <img src="./img/${ourTeam.image}" alt=""> <h2>${ourTeam.nome}</h2> <p>${ourTeam.ruolo}.</p></li>` 
 }
 
 
